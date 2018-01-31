@@ -1,0 +1,13 @@
+<!-- <import src="../template/audioList/audioList.wxml" /> -->
+<view class='container'>
+  <view class="top-banner">
+    <swiper-cell list="{{card_list}}"></swiper-cell>
+  </view>
+  <button bindtap="textevent">loadHide {{loadHide}}</button>
+  <common-list compData="{{comData}}" mode="i" loadHide="{{loadHide}}"></common-list>
+
+  <!-- <template is="tabberItem" data="{{...tabber}}" /> -->
+  <navigator url="../write/index" class="r-b-write-btn">
+    <image src="../../image/icon_write.png" mode="aspectFit"></image>
+  </navigator>
+</view>

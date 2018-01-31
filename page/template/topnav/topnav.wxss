@@ -1,0 +1,30 @@
+.top-nav-list-bg {
+    height:50px;
+}
+.top-nav-list {
+    /*margin-bottom: 5px;*/
+    padding: 0 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.top-nav-list .td {
+    height:50px;
+    font-size: 15px;
+}
+.top-nav-list .td view {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 8px;
+    /*font-weight: 800;*/
+    color:#fff
+}
+.top-nav-list .td.on view {
+    border-bottom-color: #ff4c3d;
+    color: #ff4c3d;
+    font-weight: bold;
+}

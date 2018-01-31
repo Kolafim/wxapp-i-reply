@@ -1,0 +1,40 @@
+@import "../../../theme/common.wxss";
+/* @import "../../../theme/color.wxss"; */
+@import "../../../theme/animation.wxss";
+
+.index-card-swiper {
+  /* height:340rpx; */
+  overflow: hidden;
+  padding:20rpx 0;
+}
+.index-card-swiper .index-card-panel {
+  overflow: visible;
+  transition: transform 0ms cubic-bezier(0.57, 0.26, 0.6, 1.11);
+  -webkit-transition: transform 0ms cubic-bezier(0.57, 0.26, 0.6, 1.11);
+}
+.index-card-item {
+  /* height:300rpx; */
+  border-radius: 20rpx;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  /* margin:20rpx; */
+  overflow: hidden;
+  /* width:80%; */
+  display: inline-block;
+  transition: transform 0ms cubic-bezier(0.93, 0.04, 0.63, 1.85);
+  -webkit-transition: transform 0ms cubic-bezier(0.93, 0.04, 0.63, 1.85);
+}
+.index-card-item .i-c-i-head {
+  height:200rpx;
+}
+.index-card-item .i-c-i-head .i-c-i-content {
+  padding:0 10%;
+}
+.index-card-item .i-c-i-foot {
+  height:100rpx;
+  background-color: #fff;
+}
+.index-card-item .i-c-i-foot .i-c-i-pic {
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}

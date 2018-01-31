@@ -1,0 +1,57 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.0",
+	"appid": "wxd0c78b15ddde186c",
+	"projectname": "i_reply",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "test/index",
+					"pathName": "page/test/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "details",
+					"pathName": "page/details/details",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "report",
+					"pathName": "page/report/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "details",
+					"pathName": "page/details/details",
+					"query": ""
+				}
+			]
+		}
+	}
+}

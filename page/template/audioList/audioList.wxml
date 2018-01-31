@@ -1,0 +1,54 @@
+<template name="audioList">
+  <view class="u-s-list">
+      <view class="u-s-item" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key='item' catchtap='see_details' data-sid='{{item.sid}}' >
+        <view class="u-s-i-head">
+          <image catchtap='jump' data-uid='{{item.uid}}'  class="u-s-i-pic middle bor" mode="aspectFill" src='{{item.headimage}}'></image>
+          <view class="u-s-i-info middle relative m_padding">
+            <view class="u-s-i-i-left">
+              <view class="u-s-i-name">
+                <text class="inline-block middle nowrap">{{item.uname}}</text>
+                <image class="inline-block middle" src="../../image/{{item.sex==1?'female':'man'}}.png" mode="aspectFit"></image>
+              </view>
+              <view class="u-s-i-time">{{item.ct?item.c:item.create_time}}</view>
+            </view>
+            <view class="u-s-i-i-right">
+              <image class="middle" src="../../image/erji.png" mode="aspectFit"></image>
+              <text class="inline-block middle">{{item.readnum}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="u-s-i-content">{{item.content}}</view>
+
+        <view wx:if="{{item.audio.src}}" class="slider-cell flex2 flex-line {{audio_run_index==index?'isrun':''}} fs0">
+          <view class="s-c-text">{{item.audio.time[0]+':'+item.audio.time[1]}}</view>
+          <view class="mu-slider demo-slider" data-index="{{index}}" bindtouchstart="time_touchstart" bindtouchmove="time_touchmove" bindtouchend="time_touchend" bindtouchcancel="time_touchend" catchtap="notEvent">
+            <view class="mu-slider-track"></view>
+            <view class="mu-slider-fill {{item.audio.animat?'':'trans0'}}" style="transform: scaleX({{item.audio.slider}});"></view>
+            <view class="mu-slider-thumb {{item.audio.animat?'':'trans0'}}" style="left:{{item.audio.slider*100}}%;"></view>
+          </view>
+          <view class="s-c-text">{{item.audio.maxTime[0]+':'+item.audio.maxTime[1]}}</view>
+          <view class="audio-ctr" data-index="{{index}}" catchtap="audioCtr">
+            <image  src="../../image/index_{{audio_run_index==index?'pause':'play'}}.png" mode="aspectFit"></image>
+          </view>
+        </view>
+
+
+
+        <view class="u-s-i-foot textcenter flex-line">
+          <button class="u-s-i-f-item flex-1"  catchtap='showModal'>  
+          <!-- catchtap='showModal' open-type='share' -->
+             <image class="middle" src="../../image/index_share.png" mode="aspectFit"></image>
+             <text class="inline-block middle"></text>
+          </button>
+          <view class="u-s-i-f-item flex-1" catchtap='see_details' data-sid='{{item.sid}}'>
+            <image class="middle" src="../../image/index_pinglun.png" mode="aspectFit"  ></image>
+            <text class="inline-block middle">{{item.com_count}}</text>
+          </view>
+          <view class="u-s-i-f-item flex-1" catchtap="help" data-item='{{item}}' data-id='{{index}}'>
+            <image class="middle" src="../../image/index_flower_{{item.islike?'1':'0'}}.png" mode="aspectFit"></image>
+            <text class="inline-block middle">{{item.like_count}}</text>
+          </view>
+        </view>
+      </view>
+  </view>
+</template>

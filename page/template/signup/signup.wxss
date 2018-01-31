@@ -1,0 +1,17 @@
+@import "signupInside/signupInside.wxss";
+.signup-panel {
+  background-color:rgba(0,0,0,.35)
+}
+.signup-panel-animat .signup-panel-main {
+  background-color:#fff;
+  max-width:80%;
+  padding:20rpx 60rpx;
+  border-radius: 24rpx;
+  margin:0 auto;
+}
+.signup-panel-animat .signup-close {
+  margin:10rpx 0;
+}
+.signup-panel-animat .alert-panel-main image {
+  width:300px;
+}

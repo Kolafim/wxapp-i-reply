@@ -1,0 +1,62 @@
+<view class="common-panel">
+  <!-- <button catchtap="customMethod">customMethod</button> -->
+  <!-- <view>mode:{{mode}}</view> -->
+  <slot name="s1"></slot>
+  <view class="common-list" >
+    <block wx:for-index="idx1" wx:for-item="item">
+      <view wx:for="{{newData.list}}"  class="common-item {{mode == 'd'?'isdetail':''}}" bindtap="itemTap" data-id="{{item.id}}">
+        <view class="relative">
+          <view class="c-i-head flex2 flex-line">
+            <image catchtap='openUser' data-uid='{{item.uid}}' class="c-i-h-pic middle" mode="aspectFill" src='{{item.headimage}}'></image>
+            <view class="c-i-h-info flex-1">
+              <view class="flex2 flex-line">
+                <view class="c-i-h-i-name nowrap">{{item.uname}}</view>
+                <!-- <view>
+                  <view class="c-i-h-i-slider"><view style="width:60%"></view></view>
+                </view> -->
+                <view wx:if="{{mode == 'c'}}" class="c-i-h-time gray">{{item.time}}</view>
+              </view>
+              <view wx:if="{{mode == 'i' || mode == 'd'}}" class="c-i-h-time gray2">{{item.time}}</view>
+            </view>
+            <view wx:if="{{mode == 'i' || mode == 'd'}}" class="follow {{item.isfollow?'on':''}}"></view>
+          </view>
+          <view class="c-i-main {{mode == 'c'?'left-padding-100':''}}">
+            <view class="c-i-content {{mode == 'd'?'':'row3'}}">{{item.content}}</view>
+            <view wx:if="{{mode == 'c'}}" class="comment-list-btn">
+              <text class="o_b">嗷嗷嗷</text>
+              <text>等人 </text>
+              <text class="o_b">共111条回复</text>
+            </view>
+          </view>
+          <view wx:if="{{mode == 'i'}}" class="c-i-foot-index textright">
+            <view class="icon-item">
+              <image class="inline-block middle" src="../../../image/icon_com.png" mode="aspectFit"></image>
+              <text class="inline-block middle">{{item.com_count}}</text>
+            </view>
+            <view class="icon-item">
+              <image class="inline-block middle" src="../../../image/icon_money.png" mode="aspectFit"></image>
+              <text class="inline-block middle">124</text>
+            </view>
+            <view class="icon-item">
+              <image class="inline-block middle" src="../../../image/like_off.png" mode="aspectFit"></image>
+              <text class="inline-block middle">1115</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="loading-cell textcenter" hidden="{{loadHide}}" style="padding:10px 0;">
+        <view class="weui-loading"></view>
+        <view class="l-c-text inline-block middle">加载中...</view>
+    </view>
+    <view wx:if="{{newData.list.length > page_count && loadHide}}" class="loading-cell textcenter" style="padding:10px 0;">
+        <view class="l-c-text inline-block middle gray2">已到页尾</view>
+    </view>
+    <block wx:else>
+      <view wx:if="{{newData.list.length <= 0 && loadHide}}" class="loading-cell textcenter" style="padding:10px 0;">
+          <view class="l-c-text inline-block middle gray2">没有数据</view>
+      </view>
+    </block>
+  </view>
+
+</view>

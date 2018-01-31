@@ -1,0 +1,17 @@
+<template name="topnav">
+  <view class="top-nav-list-bg">
+      <view class="top-nav-list table">
+          <view class="tr">
+              <navigator class="td middle textcenter {{index == 0?'on':''}}" url="index" open-type="switchTab">
+                  <view>网友探店</view>
+              </navigator>
+              <navigator class="td middle textcenter {{index == 1?'on':''}}" url="nearshop" open-type="redirect">
+                  <view>离我最近</view>
+              </navigator>
+              <navigator class="td middle textcenter {{index == 2?'on':''}}" url="topic?type=1" open-type="redirect">
+                  <view>人气排行</view>
+              </navigator>
+          </view>
+      </view>
+  </view>
+</template>

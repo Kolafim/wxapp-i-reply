@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "common-list": "../component/commonList/commonList",
+    "swiper-cell": "../component/swiper/swiper"
+  }
+}

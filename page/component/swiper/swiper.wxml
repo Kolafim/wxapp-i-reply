@@ -1,0 +1,20 @@
+<view class='index-card-swiper' bindtouchstart="swiper_touchstart" bindtouchmove="swiper_touchmove" bindtouchend="swiper_touchend" bindtouchcancel="swiper_touchend">
+  <view class="index-card-panel" style="width:{{panel_width}};transform:translateX({{translate}}px);transition-duration:{{duration}}ms">
+    <block wx:for="{{card_list}}" wx:for-index="cindex" wx:for-item="citem">
+      <view class="index-card-item" style="width:{{citem.swiper_width}}px;transform:scale({{citem.swiper_scale}});transition-duration:{{duration}}ms">
+        <view class="i-c-i-head table">
+          <view class="tr">
+            <view class="td middle textcenter">
+              <!-- <image class="i-c-i-head-bg" mode="aspectFill" src="../../image/"></image> -->
+              <view class="i-c-i-content row3">{{citem.content}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="i-c-i-foot flex flex-line">
+          <image data-uid='{{citem.uid}}' class="i-c-i-pic" mode="aspectFill" src='{{citem.headimage}}'></image>
+          <view class="i-c-i-uname flex-1">{{citem.uname}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

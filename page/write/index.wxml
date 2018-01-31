@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="content-cell bgfff">
+      <textarea class="content-area w100" maxlength="{{maxlength}}" bindinput="textareChange" placeholder-style="color:#bbb" auto-height="{{true}}" placeholder="交流由此开始..."/>
+      <view class="corsur-text">{{cursor}} / {{maxlength}}</view>
+  </view>
+  <view class="textcenter">
+    <view class="btn-item theme-color" catchtap="sendData">发 表</view>
+    <!-- <view class="btn-item theme-color" catchtap="tohome"></view> -->
+    <text class="inline-block animated small {{message.hide}} {{message.hide?'zoomOut':'zoomIn'}} {{message.mode}}">{{message.str}}</text>
+  </view>
+</view>

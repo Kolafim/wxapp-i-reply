@@ -1,0 +1,10 @@
+<template name="sharingMenu">
+   <view class='commodity_screen' catchtap='hideModal' wx:if="{{showModalStatus}}">
+   </view>
+   <view class='commodity_attr_box' animation="{{animationData}}" wx:if="{{showModalStatus}}" >
+     <button class='textcenter p_40 bgfff' catchtap="drawCanvas"  hover-class='btn'>分享至朋友圈</button>
+     <button class='textcenter p_40 bgfff' open-type='share'  hover-class='btn'>分享至微信群</button>
+     <button class='textcenter p_40 m_20 bgfff' catchtap='hideModal' hover-class='btn'>取消</button>
+   </view>
+   <canvas  class="Canva" catchtap='generate' canvas-id="attendCanvasId" />
+</template>

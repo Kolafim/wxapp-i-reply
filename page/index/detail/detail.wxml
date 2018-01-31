@@ -1,0 +1,37 @@
+<!-- <import src="../template/audioList/audioList.wxml" /> -->
+<view class='container'>
+  <view class="head-item">
+    <common-list compData="{{detailData}}" mode="d" loadHide="{{true}}"></common-list>
+  </view>
+  <view class="com-panel">
+    <view class="c-p-head flex2">
+      <view class="c-p-h-tab">
+        <view class="c-p-h-tab-item {{panel_index==0?'on':''}}" bindtap="tab_change" data-index="0">
+          <image class="inline-block middle" src="../../../image/icon_com.png" mode="aspectFit"></image>
+          <text class="inline-block middle">{{item.com_count}}</text>
+        </view>
+        <view class="c-p-h-tab-item {{panel_index==1?'on':''}}" bindtap="tab_change" data-index="1">
+          <image class="inline-block middle" src="../../../image/icon_money.png" mode="aspectFit"></image>
+          <text class="inline-block middle">124</text>
+        </view>
+      </view>
+      <view class="like-box">
+        <image class="inline-block middle" src="../../../image/like_{{is_like?'on':'off'}}.png" mode="aspectFit"></image>
+        <text class="inline-block middle">1115</text>
+      </view>
+    </view>
+    <swiper current="{{panel_index}}" bindchange="panel_change" duration="300">
+      <swiper-item>
+        <common-list compData="{{comData}}" mode="c" loadHide="{{comLoadHide}}"></common-list>
+      </swiper-item>
+      <swiper-item>
+        <common-list compData="{{rewardData}}" mode="c" loadHide="{{rewardLoadHide}}"></common-list>
+      </swiper-item>
+    </swiper>
+
+  </view>
+
+  <!-- <navigator url="../write/index" class="r-b-write-btn">
+    <image src="../../image/icon_write.png" mode="aspectFit"></image>
+  </navigator> -->
+</view>

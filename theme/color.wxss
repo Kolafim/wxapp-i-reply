@@ -1,0 +1,42 @@
+.btn-main {background-color:#b1df6f;color:#fff}
+.btn-main-f{background-color:#f0f0f0;color:#000}
+.btn-main:active {background-color:#9ec861}
+.btn-main.display {background-color: rgba(#b1df70, 0.55)}
+.theme-color{color:#b1df6f}
+.btn-main-orange{background-color:#faab57;color:#fff}
+
+.bgfff {background-color:#fff}
+.bggray { background-color:#efefef}
+.bgf7{background-color:#f7f7f7}
+.cf4{color:#f4f4f4}
+.c555 {color:#555}
+.c333 {color:#333}
+.c666{color:#666}
+.c000{color:#000}
+.a6{color: #a6a6a6}
+.c_b{color: #45e8fb}
+ .o_b{color: #0069b1}
+.green{color: #09BB07}
+.red{color: #e64340}
+.blue{color: #576b95}
+.yellow{color: #FFBE00}
+.orange{color:#e89b4b}
+.black{color:#222}
+.semi{color:#353535}
+.grey, .gray{color: #777}
+.gray2 {color:#aaa}
+.light {color: #b2b2b2}
+.strong{font-weight: bold}
+
+.bg-green{background-color: #09BB07}
+.bg-red{background-color: #F76260}
+.bg-blue{background-color: #10AEFF}
+.bg-yellow{background-color: #FFBE00}
+.bg-gray{background-color: #C9C9C9}
+.bg-orange, .btn-orange{background-color: #ff6600}
+
+.btn-orange:active{background-color:#c85e18}
+
+.access:active { background-color:#f6f6f6}
+
+.weui-cells__title {color:#777}

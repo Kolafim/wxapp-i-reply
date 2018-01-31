@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "page/index/index",
+        "page/index/detail/detail",
+
+        "page/test/index",
+
+        "page/user/index",
+
+        "page/write/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "爱回复",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "tabBar": {
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "color": "#a6a6a6",
+        "selectedColor": "#df6161",
+        "list": [
+            {
+                "pagePath": "page/index/index",
+                "text": "你听说了吗",
+                "iconPath": "image/tab_index_off.png",
+                "selectedIconPath": "image/tab_index_on.png"
+            },
+            {
+                "pagePath": "page/test/index",
+                "text": "不服来辩",
+                "iconPath": "image/tab_chat_off.png",
+                "selectedIconPath": "image/tab_chat_on.png"
+            },
+            {
+                "pagePath": "page/test/index",
+                "text": "榜单",
+                "iconPath": "image/tab_rank_off.png",
+                "selectedIconPath": "image/tab_rank_on.png"
+            },
+            {
+                "pagePath": "page/user/index",
+                "text": "i",
+                "iconPath": "image/tab_i_off.png",
+                "selectedIconPath": "image/tab_i_on.png"
+            }
+        ]
+    },
+    "debug": true
+}

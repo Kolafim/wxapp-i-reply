@@ -1,0 +1,30 @@
+<template name="signupInside">
+  <view class="signup-content">
+
+      <view class="signup-head textcenter">
+        <image class="s-h-icon" src="../../../../../image/logo.png" mode="widthFix"></image>
+      </view>
+      <view class="signup-main">
+        <view class="signup-input-cell flex-line">
+          <view class="l-i-c-left-icon"></view>
+          <input maxlength='11' class="signup-input phone-input flex-1" placeholder-class="placeholder" type="number" placeholder="{{placeholderStatus?'手机号':''}}" value="{{placeholderStatus?phoneValue:''}}" bindinput="signupPhoneInput" focus="{{phonefocus}}" confirm-type="验证" bindconfirm="getReg"/>
+          <view class="l-i-c-right-clear" hidden="{{clearHide}}" catchtap="clearPhoneInput">×</view>
+        </view>
+        <view class="signup-input-cell flex-line">
+          <view class="l-i-c-left-icon"></view>
+          <input maxlength='6' wx:if="{{mode}}" class="signup-input flex-1" placeholder-class="placeholder" type="number" placeholder="{{placeholderStatus?'验证码':''}}" bindinput="signupRegInput" focus="{{regfocus}}" confirm-type="助力" bindconfirm="helpUserSubmit"/>
+          <input maxlength='6' wx:else class="signup-input flex-1" placeholder-class="placeholder" type="number" placeholder="{{placeholderStatus?'验证码':''}}" bindinput="signupRegInput" focus="{{regfocus}}" confirm-type="登录" bindconfirm="signupSubmit"/>
+          <button wx:if="{{regTime > 0}}" class="l-i-c-right-reg-btn btn-main display">{{regTime}}s</button>
+          <button wx:else class="l-i-c-right-reg-btn btn-main-orange" catchtap="getReg">获取验证码</button>
+        </view>
+
+      </view>
+      <view class="signup-foot" >
+        <button wx:if="{{mode}}" class="signup-submit btn-main"  catchtap="helpUserSubmit">助 力</button>
+        <button wx:else class="signup-submit btn-main-orange"  catchtap="signupSubmit">登 录</button>
+        <view class="signup-input-cell textcenter">
+          <text class="inline-block animated small {{message.hide}} {{message.hide?'zoomOut':'zoomIn'}} {{message.mode}}">{{message.str}}</text>
+        </view>
+      </view>
+  </view>
+</template>

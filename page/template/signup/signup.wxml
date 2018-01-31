@@ -1,0 +1,20 @@
+<import src="signupInside/signupInside.wxml"></import>
+<template name="signup">
+  <view class="signup-panel flex-fixed" catchtap="closeSignup" hidden="{{signup_hidden}}">
+    <view class="bg-hide" catchtap="eventFalse"></view>
+      <view class="signup-panel-animat animated small {{animat}}" catchtap="eventFalse">
+        <view wx:if="{{status == 0}}" class="signup-panel-main">
+          <!-- <signup wx:if="{{!signup_hidden}}">
+            <button slot="s2" class="signup-close" catchtap="closeSignup">close sign</button>
+          </signup> -->
+          <template is="signupInside" data="{{...signupInsideData}}"/>
+          <!-- <button class="signup-close" catchtap="closeSignup">close sign</button> -->
+        </view>
+        <block wx:else>
+          <view wx:if="{{status == 1 || status == 2 || status == 3}}" class="alert-panel-main">
+            <image catchtap="alertCallBack" src="../../image/alert_img_{{status}}.png" mode="widthFix"></image>
+          </view>
+        </block>
+      </view>
+  </view>
+</template>

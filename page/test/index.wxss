@@ -1,0 +1,3 @@
+@import "../../theme/weui.wxss";
+/* @import '../template/signup/signup.wxss'; */
+/* @import '../template/sharingMenu/sharingMenu.wxss'; */

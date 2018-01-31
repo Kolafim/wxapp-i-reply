@@ -1,0 +1,48 @@
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.commodity_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+}
+.p_40{
+   padding: 40rpx 0;
+}
+.m_20{
+  margin-top:20rpx; 
+}
+.commodity_attr_box button{
+ 
+  line-height: normal;
+  font-size:32rpx;
+  border-radius: 0 0;
+  
+}
+.commodity_attr_box ::after{
+  content: none;
+   border: none;
+}
+.btn{
+  background-color: #f2f0f0;
+}
+.Canva{
+ position: absolute;
+ left: -1000%;
+ top:0;
+ width: 100%; 
+ height: 100%;
+ z-index: -1000;
+}

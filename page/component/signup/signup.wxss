@@ -1,0 +1,34 @@
+@import "../../../theme/common.wxss";
+@import "../../../theme/color.wxss";
+
+.signup-content {
+  /*background-color:#fff;
+  width:100%;
+  padding:12%;*/
+}
+.signup-input-cell{
+  position:relative;
+
+}
+.signup-input-cell .signup-input {
+  background-color: transparent;
+  border:none;
+  padding:5px;
+  width:100%;
+  height:46px;
+  color:inherit;
+  font-size:.95rem;
+}
+.signup-input-cell .l-i-c-right-clear {
+  line-height: 18px;
+  font-size: 30px;
+  padding: 14px;
+  font-weight: 100;
+  color:inherit;
+}
+.signup-input-cell .l-i-c-right-reg-btn {
+  min-width:110px;
+}
+.signup-input-cell .l-i-c-right-reg-btn.display {
+  color:#666;
+}
