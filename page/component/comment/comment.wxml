@@ -1,0 +1,20 @@
+<view class="wrapper">
+       <!-- 隐藏评论框 -->
+  
+  <!-- <view class='input_box '    catchtap='comment'> -->
+   <view class='frame {{commData.circle}}' style="display:{{commData.eject}}" animation="{{animationData}}">
+    <view class='textarea' catchtap='textcomment' >
+      <textarea  class='po_fi' show-confirm-bar="{{bar}}" maxlength='200' placeholder-class='placeholder'
+       placeholder='{{prompt}}' placeholder-class='text_boxs' value='{{t_value}}' bindinput="bindTextAreaBlur" 
+        fixed="true" cursor-spacing='20' bindfocus='FocusTap' focus="{{textarea}}" ></textarea>
+    </view>
+      
+       <view class='send_out'>
+         <button catchtap='out' class='btn_out' hover-class='btns_out' >发表评论</button>
+       </view>
+      
+     </view>
+       
+   <!-- </view> -->
+   <!-- 隐藏评论框 -->
+</view>

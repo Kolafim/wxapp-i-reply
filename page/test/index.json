@@ -1,5 +1,5 @@
 {
-  "usingComponents": {
-    "common-list": "../component/commonList/commonList"
-  }
+ "usingComponents": {
+  "comment": "../component/comment/comment"
+ }
 }

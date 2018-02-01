@@ -1,5 +1,5 @@
 <!-- <import src="../template/signup/signup.wxml"/> -->
-<view class="container">
+ <view class="container">
   <text>page/test/index.wxml</text>
   <view class="ripple" style="{{rippleStyle}}"></view>
   <navigator class="weui-cell panel-color weui-cell_access" url="../spell/index">
@@ -18,7 +18,10 @@
   <common-list comData="{{comData}}" mode="1"></common-list>
 </view>
 
-<!-- <template is="signup" data="{{...signupData}}"/> -->
 
-<!-- <import src="../template/sharingMenu/sharingMenu.wxml"/> -->
-<!-- <template is="sharingMenu"  data="{{showModalStatus,animationData}}"/> -->
+
+<!-- 引用组件的页面模版 -->
+<view class='p_a'>
+   <view class='mongolia' bindtap='close'  style="display:{{commData.eject}}"></view>
+   <comment commData="{{commData}}" bindmyevent="onMyEvent"></comment>
+</view>

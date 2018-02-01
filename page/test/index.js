@@ -6,9 +6,9 @@ var app = getApp(), _p, sm;
 Page({
 
   data: {
-    comData:{
-      title:'4444441',
-      list:[]
+    commData:{
+      eject:'none',
+      circle:'circle'
     }
   },
 
@@ -67,5 +67,37 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindTextAreaBlur: (even) => {    //自动获取输入框的值
+    console.log(even)
+    _p.setData({
+      content: even.detail.value
+    })
+  },
+  onMyEvent: function (e) {
+     // 自定义组件触发事件时提供的detail对象
+    console.log("e.detail", e.detail)
+
+  },
+ //打开评论框
+  openSignup:function(){
+    this.setData({
+       'commData.eject': 'bolck',
+       'commData.circle': 'circle'
+     })  
+  },
+  close:function(){
+    console.log('关闭')
+    this.setData({
+      
+       'commData.circle': 'circles'
+        }) 
+    setTimeout(function () {
+      this.setData({
+        'commData.eject': 'none'
+      })
+    
+    }.bind(this), 500)
+    
   }
 })
