@@ -1,0 +1,67 @@
+<view class='container'>
+  <view class="head">
+
+  </view>
+  <view class="debate-panel">
+    <view class="debate-list" >
+      <block wx:for-index="idx1" wx:for-item="item">
+        <view wx:for="{{list}}"  class="debate-item align-{{item.camp?'right':'left'}}" bindtap="itemTap" data-id="{{item.id}}">
+          <view class="d-i-pic-box">
+            <image class="d-i-pic-bg" mode="aspectFit" src="../../image/grass.png"></image>
+            <image catchtap='openUser' data-uid='{{item.uid}}' class="d-i-h-pic" mode="aspectFill" src='{{item.headimage}}'></image>
+          </view>
+          <view class="relative overhide">
+            <view class="d-i-info">
+              <view class="d-i-head">
+
+                <view class="d-i-h-info">
+                  <view class="flex2 flex-line">
+                    <view class="d-i-h-i-name nowrap">{{item.uname}}</view>
+                    <!-- <view wx:if="{{mode == 'c'}}" class="d-i-h-time gray">{{item.time}}</view> -->
+                  </view>
+                  <view class="d-i-h-time gray2">{{item.time}}</view>
+                </view>
+                <!-- <view class="follow {{item.isfollow?'on':''}}"></view> -->
+              </view>
+              <view class="d-i-main">
+                <view class="d-i-content {{mode == 'd'?'':'row3'}}">{{item.content}}</view>
+              </view>
+              <view class="d-i-foot-index">
+                <view class="icon-item">
+                  <image class="inline-block middle" src="../../../image/icon_com.png" mode="aspectFit"></image>
+                  <text class="inline-block middle">{{item.com_count}}</text>
+                </view>
+                <view class="icon-item">
+                  <image class="inline-block middle" src="../../../image/icon_money.png" mode="aspectFit"></image>
+                  <text class="inline-block middle">124</text>
+                </view>
+                <view class="icon-item">
+                  <image class="inline-block middle" src="../../../image/like_off.png" mode="aspectFit"></image>
+                  <text class="inline-block middle">1115</text>
+                </view>
+              </view>
+              <view class="d-i-foot">
+                <view class="comment-list-btn textcenter">共有1条回复</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class="loading-cell textcenter" hidden="{{loadHide}}" style="padding:10px 0;">
+          <view class="weui-loading"></view>
+          <view class="l-c-text inline-block middle">加载中...</view>
+      </view>
+      <view wx:if="{{newData.list.length > page_count && loadHide}}" class="loading-cell textcenter" style="padding:10px 0;">
+          <view class="l-c-text inline-block middle gray2">已到页尾</view>
+      </view>
+      <block wx:else>
+        <view wx:if="{{newData.list.length <= 0 && loadHide}}" class="loading-cell textcenter" style="padding:10px 0;">
+            <view class="l-c-text inline-block middle gray2">没有数据</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <navigator url="../write/index" class="r-b-write-btn">
+    <image src="../../image/icon_write.png" mode="aspectFit"></image>
+  </navigator>
+</view>

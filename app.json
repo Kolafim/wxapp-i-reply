@@ -3,6 +3,8 @@
         "page/index/index",
         "page/index/detail/detail",
 
+        "page/debate/index",
+
         "page/test/index",
 
         "page/user/index",
@@ -35,7 +37,7 @@
                 "selectedIconPath": "image/tab_index_on.png"
             },
             {
-                "pagePath": "page/test/index",
+                "pagePath": "page/debate/index",
                 "text": "不服来辩",
                 "iconPath": "image/tab_chat_off.png",
                 "selectedIconPath": "image/tab_chat_on.png"

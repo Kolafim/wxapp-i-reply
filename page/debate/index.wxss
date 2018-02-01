@@ -1,0 +1,60 @@
+.debate-panel .debate-list {
+
+}
+.debate-panel .debate-list .debate-item {
+
+}
+.debate-panel .debate-list .d-i-pic-box {
+  position:relative;
+  width:100rpx;
+  height:100rpx;
+  margin:0 10rpx;
+}
+.debate-panel .debate-list .align-left .d-i-pic-box {
+  float:left;
+}
+.debate-panel .debate-list .align-right .d-i-pic-box {
+  float:right;
+}
+.debate-panel .debate-list .debate-item .d-i-pic-box .d-i-pic-bg {
+  height:100%;
+  width:100%;
+}
+.debate-panel .debate-list .debate-item .d-i-pic-box .d-i-h-pic {
+  position:absolute;
+  left:12%;
+  top:12%;
+  width:76%;
+  height:76%;
+  border-radius: 50%;
+}
+.debate-panel .debate-list .debate-item > .relative {
+}
+.debate-panel .debate-list .debate-item .d-i-info {
+  display: inline-block;
+  min-width: 60%;
+  max-width: 80%;
+  background: #fefefe;
+  border-radius: 10rpx;
+}
+.debate-panel .debate-list .debate-item .d-i-head {
+
+}
+.debate-panel .debate-list .debate-item .d-i-main {
+
+}
+.debate-panel .debate-list .debate-item .d-i-foot-index {
+
+}
+.debate-panel .debate-list .align-right .d-i-foot-index {
+  text-align: right;
+}
+.debate-panel .debate-list .debate-item .d-i-foot-index .icon-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+.debate-panel .debate-list .debate-item .d-i-foot-index .icon-item image {
+  width:15px;
+  height:15px;
+  margin-right:3px;
+}

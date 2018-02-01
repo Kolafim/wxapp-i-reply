@@ -124,26 +124,20 @@ Page({
 
     app.getData(_p,'/spred/addSpredInfo.dtzn',()=>({
       scontent:_p.textarea_val,
-      uid: app.user_info.id,
-      token: app.user_info.token,
-      'spredclass':0
+      uid: 100000,//app.user_info.id,
+      token: '17BCF80CF2966CBF1ED168F0C316934A946CBC6FD619B3ADC376C521D41754B8',//app.user_info.token,
+      spredclass:4
     }),(_res)=>{
       _p.req_run = 0;
       // wx.hideLoading();
       if(_res.result == 200){
-        wx.removeSavedFile({
-          filePath: _p.path,
-          complete: function(res) {
-            console.warn('提交时，删除本地存储：',res)
-          }
-        });
         console.log("提交成功：",_res);
         wx.showToast({
           title: '发布成功',
           icon: 'success',
           duration: 2500
         })
-        setTimeout(()=>{_p.tohome(1)},2500);
+        // setTimeout(()=>{_p.tohome(1)},2500);
       }else{
         console.log("发布出错：",_res);
         _p.showMessage_1(_res.msg,0);
