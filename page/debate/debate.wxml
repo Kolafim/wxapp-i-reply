@@ -1,0 +1,9 @@
+<!--page/debate/debate.wxml-->
+<view class='bgfff'>
+   <view class='t_icon right'>
+    ?
+   </view>
+   <view class='t_title'>
+      学妹和学姐谁更适合做女朋友？
+   </view>
+</view>

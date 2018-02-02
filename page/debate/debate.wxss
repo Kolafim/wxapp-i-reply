@@ -1,0 +1,19 @@
+/* page/debate/debate.wxss */
+.t_icon{
+  border-radius: 50% 50%;
+  border: 1rpx #000 solid;
+  margin: 20rpx;
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t_title{
+  font-size: 40rpx;
+  color: red;
+  font-weight:500;
+  padding: 80rpx 80rpx;
+  text-align: center;
+}
